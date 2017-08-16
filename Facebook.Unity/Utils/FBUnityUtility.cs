@@ -34,7 +34,7 @@
             {
                 if (string.IsNullOrEmpty(FBUnityUtility.currentDeviceIdentifier))
                 {
-                    FBUnityUtility.currentDeviceIdentifier = SystemInfo.deviceUniqueIdentifier;
+                    FBUnityUtility.currentDeviceIdentifier = "funkypanda";//SystemInfo.deviceUniqueIdentifier;
                 }
 
                 return FBUnityUtility.currentDeviceIdentifier;

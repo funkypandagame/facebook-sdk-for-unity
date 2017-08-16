@@ -64,6 +64,7 @@ namespace Facebook.Unity.Editor
         }
 
         // Exporting the *.unityPackage for Asset store
+        [UnityEditor.MenuItem("Custom Build / Build FacebookSDK")]
         public static string ExportPackage()
         {
             Debug.Log("Exporting Facebook Unity Package...");
@@ -81,7 +82,8 @@ namespace Facebook.Unity.Editor
 
                 string[] facebookFiles = (string[])Directory.GetFiles(FacebookPath, "*.*", SearchOption.TopDirectoryOnly);
                 string[] sdkFiles = (string[])Directory.GetFiles(SDKPath, "*.*", SearchOption.AllDirectories);
-                string[] exampleFiles = (string[])Directory.GetFiles(ExamplesPath, "*.*", SearchOption.AllDirectories);
+                //string[] exampleFiles = (string[])Directory.GetFiles(ExamplesPath, "*.*", SearchOption.AllDirectories);
+                string[] exampleFiles = new string[0];
                 string[] pluginsFiles = (string[])Directory.GetFiles(PluginsPath, "*.*", SearchOption.AllDirectories);
 
                 string[] playServicesResolverFiles = (string[])Directory.GetFiles(PlayServicesResolverPath, "*.*",
